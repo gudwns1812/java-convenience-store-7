@@ -51,7 +51,7 @@ public class ProductInventory {
                 return;
             }
 
-            productStock.put(product, count - productCount);
+            productStock.put(product, 0);
             count -= productCount;
         }
     }
