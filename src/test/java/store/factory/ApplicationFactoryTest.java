@@ -9,7 +9,7 @@ import store.domain.promotion.NonePromotion;
 
 class ApplicationFactoryTest {
 
-    private ApplicationFactory factory = new ApplicationFactory();
+    private final ApplicationFactory factory = new ApplicationFactory();
 
     @Test
     void 초기_상품_세팅() {

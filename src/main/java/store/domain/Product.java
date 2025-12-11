@@ -27,11 +27,19 @@ public class Product {
             return false;
         }
 
-        return Objects.equals(name, product.name);
+        return Objects.equals(name, product.name) && price.equals(product.price) && Objects.equals(
+                promotion.getClass(), product.promotion.getClass());
     }
 
     @Override
     public int hashCode() {
-        return Objects.hashCode(name);
+        int result = Objects.hashCode(name);
+        result = 31 * result + price.hashCode();
+        result = 31 * result + Objects.hashCode(promotion);
+        return result;
+    }
+
+    public boolean isPromoted() {
+        return promotion.isPromotion();
     }
 }

@@ -22,4 +22,18 @@ public class Money {
     public static Money won(int amount) {
         return new Money(amount);
     }
+
+    @Override
+    public final boolean equals(Object o) {
+        if (!(o instanceof Money money)) {
+            return false;
+        }
+
+        return amount == money.amount;
+    }
+
+    @Override
+    public int hashCode() {
+        return amount;
+    }
 }

@@ -9,4 +9,8 @@ public class InputView {
     public static String readContinue() {
         return readLine();
     }
+
+    public static String readProductAndCount() {
+        return readLine();
+    }
 }
